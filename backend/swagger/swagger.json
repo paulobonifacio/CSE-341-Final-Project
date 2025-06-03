@@ -6,7 +6,7 @@
     "description": "API for managing medication stocks in a hospital or clinic."
   },
   "servers": [
-    { "url": "http://localhost:3000/api" }
+    { "url": "/api" }
   ],
   "components": {
     "securitySchemes": {
