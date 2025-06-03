@@ -21,15 +21,16 @@
         "type": "object",
         "required": ["email", "name", "password"],
         "properties": {
-          "email":       { "type": "string", "format": "email" },
-          "name":        { "type": "string" },
-          "password":    { "type": "string", "minLength": 6 }
+          "email":    { "type": "string", "format": "email" },
+          "name":     { "type": "string" },
+          "password": { "type": "string", "minLength": 6 }
         }
       },
       "Medication": {
         "type": "object",
-        "required": ["name", "quantity"],
+        "required": ["campoId", "name", "quantity", "expirationDate"],
         "properties": {
+          "campoId":        { "type": "string",  "description": "Unique medication identifier" },
           "name":           { "type": "string",  "description": "Medication name" },
           "description":    { "type": "string",  "description": "Optional description" },
           "quantity":       { "type": "integer", "description": "Stock quantity (≥0)" },
@@ -99,7 +100,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["email","password"],
+                "required": ["email", "password"],
                 "properties": {
                   "email":    { "type": "string", "format": "email" },
                   "password": { "type": "string" }
